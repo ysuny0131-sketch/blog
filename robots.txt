@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ysuny0131-sketch.github.io/blog/sitemap.xml
