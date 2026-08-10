@@ -87,8 +87,14 @@ def build():
         posts.append(meta)
     posts.sort(key=lambda p: p["date"], reverse=True)
 
-    verification = CFG.get("naver_site_verification", "").strip()
-    verify_tag = f'<meta name="naver-site-verification" content="{html.escape(verification)}">' if verification else ""
+    naver_verification = CFG.get("naver_site_verification", "").strip()
+    google_verification = CFG.get("google_site_verification", "").strip()
+    verification_tags = []
+    if naver_verification:
+        verification_tags.append(f'<meta name="naver-site-verification" content="{html.escape(naver_verification, quote=True)}">')
+    if google_verification:
+        verification_tags.append(f'<meta name="google-site-verification" content="{html.escape(google_verification, quote=True)}">')
+    verify_tags = "\n".join(verification_tags)
 
     toc=[]; articles=[]
     for p in posts:
@@ -131,7 +137,7 @@ def build():
 <meta property="og:title" content="{html.escape(CFG['site_name'], quote=True)}">
 <meta property="og:description" content="{html.escape(CFG['site_description'], quote=True)}">
 <meta property="og:url" content="{BASE}/">
-{verify_tag}
+{verify_tags}
 <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
 </head>
 <body id="top">
