@@ -1,0 +1,11 @@
+[
+  {
+    "title": "블로그를 시작합니다",
+    "date": "2026-08-10",
+    "description": "생각과 기록을 차곡차곡 남기기 위해 블로그를 시작합니다.",
+    "slug": "welcome",
+    "tags": ["시작", "기록"],
+    "url": "https://ysuny0131-sketch.github.io/blog/#welcome",
+    "source_file": "2026-08-10-welcome.md"
+  }
+]
