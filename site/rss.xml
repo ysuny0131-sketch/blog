@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel>
+<title>선영의 기록</title>
+<link>https://example.com/</link>
+<description>일과 생각, 관찰을 기록하는 개인 블로그</description>
+<language>ko-KR</language>
+<item>
+<title>블로그를 시작합니다</title>
+<link>https://example.com/#welcome</link>
+<guid>https://example.com/#welcome</guid>
+<pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate>
+<description>이 정적 블로그의 첫 번째 글입니다.</description>
+</item>
+</channel></rss>
